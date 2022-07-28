@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"path": "../scraper-server"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {}
+}
