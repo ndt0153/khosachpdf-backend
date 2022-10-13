@@ -17,5 +17,7 @@ const BookSchema = new Schema({
   image_name: { type: String },
   download_pdf: { type: Boolean },
   pdf_name: { type: String },
+  cate1_slug: { type: String },
+  cate2_slug: { type: String },
 });
 module.exports = mongoose.model("Book", BookSchema, "Books");
