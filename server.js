@@ -122,6 +122,22 @@ app.get("/fixCate1", async (req, res) => {
     res.send(result);
   });
 });
+app.get("/addImageLink", async (req, res) => {
+  Book.updateMany({}, [
+    {
+      $set: {
+        test_image: {
+          $concat: [
+            "https://f004.backblazeb2.com/file/khosachpdf/webp/",
+            "$image_name",
+          ],
+        },
+      },
+    },
+  ]).then(function (result) {
+    res.send(result);
+  });
+});
 app.get("/xoaCate1", async (req, res) => {
   Book.updateMany({}, { $unset: { cate1_slug: 1 } })
     .then((result) => {
